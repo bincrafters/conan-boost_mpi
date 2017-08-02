@@ -17,6 +17,7 @@ class BoostMpiConan(ConanFile):
                       "Boost.Iterator/1.64.0@bincrafters/testing", \
                       "Boost.Mpl/1.64.0@bincrafters/testing", \
                       "Boost.Optional/1.64.0@bincrafters/testing", \
+                      "Boost.Property_Map/1.64.0@bincrafters/testing", \
                       "Boost.Python/1.64.0@bincrafters/testing", \
                       "Boost.Serialization/1.64.0@bincrafters/testing", \
                       "Boost.Smart_Ptr/1.64.0@bincrafters/testing", \
@@ -24,8 +25,6 @@ class BoostMpiConan(ConanFile):
                       "Boost.Throw_Exception/1.64.0@bincrafters/testing", \
                       "Boost.Type_Traits/1.64.0@bincrafters/testing"
 
-                      # "Boost.Property_Map/1.64.0@bincrafters/testing", \ # This is a circular dependency , Needs discussion
-                      
                       #assert1 config0 core2 function5 graph14 integer3 iterator5 mpl5 optional5 property_map14 python9 serialization11 smart_ptr4 static_assert1 throw_exception2 type_traits3
                       
     def source(self):
