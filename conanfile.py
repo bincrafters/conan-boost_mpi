@@ -4,7 +4,6 @@ from conans import ConanFile, tools, os
 class BoostMpiConan(ConanFile):
     name = "Boost.Mpi"
     version = "1.64.0"
-    generators = "boost"
     url = "https://github.com/bincrafters/conan-boost-mpi"
     description = "Please visit http://www.boost.org/doc/libs/1_64_0/libs/libraries.htm"
     license = "www.boost.org/users/license.html"
