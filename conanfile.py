@@ -4,11 +4,16 @@ from conans import ConanFile
 class BoostMpiConan(ConanFile):
     name = "Boost.Mpi"
     version = "1.65.1"
+    options = {"mpicc": "ANY"}
+    default_options = "mpicc=default"
     requires = \
         "Boost.Level14Group/1.65.1@bincrafters/testing"
     lib_short_names = ["mpi"]
     is_header_only = False
     is_in_cycle_group = True
+
+    def configure(self):
+        self.options["Boost.Level14Group"].mpicc = self.options.mpicc 
 
     # BEGIN
 
