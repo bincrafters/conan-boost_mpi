@@ -7,7 +7,7 @@ from conans import ConanFile, tools
 class BoostMpiConan(ConanFile):
     name = "boost_mpi"
     version = "1.66.0"
-    url = "https://github.com/bincrafters/conan-boost-mpi"
+    url = "https://github.com/bincrafters/conan-boost_mpi"
 
     lib_short_names = ["mpi"]
     is_in_cycle_group = True
