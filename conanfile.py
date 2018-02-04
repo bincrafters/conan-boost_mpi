@@ -6,7 +6,7 @@ from conans import ConanFile, tools
 
 class BoostMpiConan(ConanFile):
     name = "boost_mpi"
-    version = "1.66.0"
+    version = "1.65.1"
     url = "https://github.com/bincrafters/conan-boost_mpi"
     author = "Bincrafters <bincrafters@gmail.com>"
     exports = ["LICENSE.md"]
@@ -18,8 +18,8 @@ class BoostMpiConan(ConanFile):
     default_options = "mpicc=default"
 
     requires = (
-        "boost_package_tools/1.66.0@bincrafters/testing",
-        "boost_level14group/1.66.0@bincrafters/testing"
+        "boost_package_tools/1.65.1@bincrafters/testing",
+        "boost_level14group/1.65.1@bincrafters/testing"
     )
 
     def configure(self):
@@ -38,7 +38,7 @@ class BoostMpiConan(ConanFile):
     short_paths = True
     generators = "boost"
     settings = "os", "arch", "compiler", "build_type"
-    build_requires = "boost_generator/1.66.0@bincrafters/testing"
+    build_requires = "boost_generator/1.65.1@bincrafters/testing"
 
     def package_id(self):
         getattr(self, "package_id_additional", lambda:None)()
