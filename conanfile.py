@@ -11,7 +11,7 @@ class BoostMpiConan(ConanFile):
     author = "Bincrafters <bincrafters@gmail.com>"
     exports = ["LICENSE.md"]
     lib_short_names = ["mpi"]
-    is_in_cycle_group = True
+    level_group = "boost_level14group"
     is_header_only = False
 
     options = {"mpicc": "ANY"}
