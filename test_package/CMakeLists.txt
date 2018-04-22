@@ -15,13 +15,10 @@ target_link_libraries(${CMAKE_PROJECT_NAME}
   CONAN_PKG::boost_core
   CONAN_PKG::boost_foreach
   CONAN_PKG::boost_function
-  CONAN_PKG::boost_graph
   CONAN_PKG::boost_integer
   CONAN_PKG::boost_iterator
-  CONAN_PKG::boost_mpi
   CONAN_PKG::boost_mpl
   CONAN_PKG::boost_optional
-  CONAN_PKG::boost_property_map
   CONAN_PKG::boost_python
   CONAN_PKG::boost_serialization
   CONAN_PKG::boost_smart_ptr
