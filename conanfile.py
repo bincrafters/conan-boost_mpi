@@ -13,22 +13,19 @@ class BoostMpiConan(ConanFile):
     level_group = "boost_level14group"
     is_header_only = False
 
-    options = {"mpicc": "ANY"}
-    default_options = "mpicc=default"
-
     requires = (
         "boost_level14group/1.67.0@bincrafters/testing",
         "boost_package_tools/1.67.0@bincrafters/testing"
     )
-
-    def configure(self):
-        self.options["boost_level14group"].mpicc = self.options.mpicc
 
     def package_id_additional(self):
         boost_deps_only = [dep_name for dep_name in self.info.requires.pkg_names if dep_name.startswith("boost_")]
 
         for dep_name in boost_deps_only:
             self.info.requires[dep_name].full_version_mode()
+
+    def package_info_additional(self):
+        self.cpp_info.libs = list(set(self.cpp_info.libs) - set(["mpi"]))
 
     # BEGIN
 
