@@ -16,5 +16,5 @@ target_link_libraries(${CMAKE_PROJECT_NAME}
 set_property(TARGET ${CMAKE_PROJECT_NAME} PROPERTY CXX_STANDARD 11)
 
 if(MPI_CXX_FOUND)
-  target_link_libraries(${CMAKE_PROJECT_NAME} CONAN_PKG::openmpi)
-endif(MPI_CXX_FOUND)
+  target_link_libraries(${CMAKE_PROJECT_NAME} MPI::MPI_CXX)
+endif(MPI_FOUND)
