@@ -10,12 +10,14 @@ class TestPackageConan(ConanFile):
     settings = "os", "compiler", "build_type", "arch"
     generators = "cmake"
 
-    def build_requirements(self):
+    def requirements(self):
         if not tools.os_info.is_windows:
-            self.build_requires("openmpi/3.0.0@bincrafters/stable")
+            self.requires("openmpi/3.0.0@bincrafters/stable")
 
     def build(self):
         cmake = CMake(self)
+        if not tools.os_info.is_windows:
+            cmake.definitions["CONAN_HAVE_OPENMPI"] = "1"
         cmake.configure()
         cmake.build()
 
